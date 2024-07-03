@@ -27,7 +27,7 @@ def set_config():
     current_directory = os.path.dirname(current_file_path)
     parent_directory = os.path.dirname(current_directory)
     parent_directory = os.path.dirname(parent_directory)
-    used_directory = os.path.join(parent_directory, 'res/quarz') # or use dsa
+    used_directory = os.path.join(parent_directory, 'res/tom') # or use dsa
     config["imageFolder"] = used_directory
 
     # visualization of pipeline interim results
@@ -57,7 +57,7 @@ def set_config():
     # feature algorithm
     config["featureMethod"] = "ROOTSIFT"
     # most sensitive parameter of the feature algorithm to control the number of detected keypoints
-    config["keypointThresh"] = 0.04
+    config["keypointThresh"] = 0.04  # TODO might be exciting change
     # matching method, brute force (bf) or fast library of approximated nearest neighbors (flann)
     config["matchingMethod"] = "bf"
     # ratio or threshold according to D. Lowe to discard low quality matches, lower is more restrictive
