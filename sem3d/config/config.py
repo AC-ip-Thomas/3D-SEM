@@ -48,7 +48,7 @@ def set_config():
 
     # save point cloud in the specified directory
     # (point cloud is otherwise only stored in the MvsPointClouds object)
-    config["savePointCloud"] = False
+    config["savePointCloud"] = True
 
     ###########
     # feature detection and matching
@@ -57,11 +57,11 @@ def set_config():
     # feature algorithm
     config["featureMethod"] = "ROOTSIFT"
     # most sensitive parameter of the feature algorithm to control the number of detected keypoints
-    config["keypointThresh"] = 0.04  # TODO might be exciting change
+    config["keypointThresh"] = 0.04  # TODO might be exciting change, was 0.04
     # matching method, brute force (bf) or fast library of approximated nearest neighbors (flann)
     config["matchingMethod"] = "bf"
     # ratio or threshold according to D. Lowe to discard low quality matches, lower is more restrictive
-    config["matchingThresh"] = 0.75
+    config["matchingThresh"] = 0.5 # originaklly 0.75
     # motion constraints can be used when orbital camera motions/ eucentric tiltings were used to acquire the images
     config["motionConstraints"] = True
     # thresholds of maximum allowed disparities between matched features in u- and v-direction

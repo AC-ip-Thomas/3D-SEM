@@ -1,7 +1,7 @@
 
 numpy
 opencv-python
-matplotlib
+matplotlib == 3.7.3
 Pillow
 scipy
 scikit-image
